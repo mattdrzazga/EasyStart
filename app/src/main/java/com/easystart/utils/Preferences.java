@@ -18,12 +18,14 @@ public class Preferences {
         this.preferences = preferences;
     }
 
+    @SuppressWarnings("unused")
     public void saveFirstRun(boolean firstRun) {
         preferences.edit()
                 .putBoolean(KEY_FIRST_RUN, firstRun)
                 .apply();
     }
 
+    @SuppressWarnings("unused")
     public boolean getFirstRun() {
         return preferences.getBoolean(KEY_FIRST_RUN, false);
     }
