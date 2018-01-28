@@ -1,7 +1,7 @@
 apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion 26
+    compileSdkVersion 27
     defaultConfig {
         applicationId "com.easystart"
         minSdkVersion 16
@@ -19,28 +19,69 @@ android {
 }
 
 ext {
+    // https://developer.android.com/topic/libraries/support-library/revisions.html
+    supportLibraryVersion = '27.0.2'
+
+    // https://androidstudio.googleblog.com/search?q=constraint
+    constraintLayoutVersion = '1.1.0-beta4'
+
+    //  https://github.com/codepath/android_guides/wiki/Dependency-Injection-with-Dagger-2
     daggerVersion = '2.13'
+
+    //  https://mvnrepository.com/artifact/com.google.code.findbugs/jsr305
+    findbugsVersion = '3.0.1'
+
+    //  https://developer.android.com/topic/libraries/architecture/adding-components.html
     architectureComponentsVersion = '1.1.0'
+    roomVersion = '1.0.0'
+
+    //  https://github.com/JakeWharton/butterknife
+    butterknifeVersion = '8.8.1'
+
+    //  https://github.com/square/leakcanary
+    leakCanaryVersion = '1.5.1'
+
+    junitVersion = '4.12'
+    // https://github.com/google/truth/releases
+
+    // https://developer.android.com/topic/libraries/testing-support-library/release-notes.html
+    espressoVersion = '3.0.1'
 }
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
-    implementation 'com.android.support:appcompat-v7:26.1.0'
-    implementation 'com.android.support.constraint:constraint-layout:1.0.2'
-    testImplementation 'junit:junit:4.12'
+    implementation "com.android.support:appcompat-v7:$supportLibraryVersion"
+    implementation "com.android.support.constraint:constraint-layout:$constraintLayoutVersion"
+    testImplementation "junit:junit:$junitVersion"
     androidTestImplementation 'com.android.support.test:runner:1.0.1'
-    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.1'
+    androidTestImplementation "com.android.support.test.espresso:espresso-core:$espressoVersion"
     
-    //  Dagger2 https://github.com/codepath/android_guides/wiki/Dependency-Injection-with-Dagger-2
+    //  Dagger2
     implementation "com.google.dagger:dagger:$daggerVersion"
     implementation "com.google.dagger:dagger-android:$daggerVersion"
     implementation "com.google.dagger:dagger-android-support:$daggerVersion"
     annotationProcessor "com.google.dagger:dagger-android-processor:$daggerVersion"
     annotationProcessor "com.google.dagger:dagger-compiler:$daggerVersion"
+    testImplementation "com.google.code.findbugs:jsr305:$findbugsVersion"
+    androidTestImplementation "com.google.code.findbugs:jsr305:$findbugsVersion"
 
-    //  ViewModel https://developer.android.com/topic/libraries/architecture/adding-components.html
-    implementation "android.arch.lifecycle:viewmodel:$architectureComponentsVersion"
+    //  ViewModel
     implementation "android.arch.lifecycle:extensions:$architectureComponentsVersion"
     annotationProcessor "android.arch.lifecycle:compiler:$architectureComponentsVersion"
+    // Java8 support for Lifecycles - use this instead of compiler above when working with Java8
+//    implementation "android.arch.lifecycle:common-java8:$architectureComponentsVersion"
+
+
+//  Room
+//    implementation "android.arch.persistence.room:runtime:$roomVersion"
+//    annotationProcessor "android.arch.persistence.room:compiler:$roomVersion"
+
+    //  ButterKnife
+//    implementation "com.jakewharton:butterknife:$butterknifeVersion"
+//    annotationProcessor "com.jakewharton:butterknife-compiler:$butterknifeVersion"
+
+//    debugImplementation "com.squareup.leakcanary:leakcanary-android:$leakCanaryVersion"
+//    releaseImplementation "com.squareup.leakcanary:leakcanary-android-no-op:$leakCanaryVersion"
+//    testImplementation "com.squareup.leakcanary:leakcanary-android-no-op:$leakCanaryVersion"
 
 }
