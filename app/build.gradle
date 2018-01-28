@@ -16,6 +16,10 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
 }
 
 ext {
@@ -49,7 +53,7 @@ ext {
 }
 
 dependencies {
-    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
     implementation "com.android.support:appcompat-v7:$supportLibraryVersion"
     implementation "com.android.support.constraint:constraint-layout:$constraintLayoutVersion"
     testImplementation "junit:junit:$junitVersion"
@@ -67,9 +71,8 @@ dependencies {
 
     //  ViewModel
     implementation "android.arch.lifecycle:extensions:$architectureComponentsVersion"
-    annotationProcessor "android.arch.lifecycle:compiler:$architectureComponentsVersion"
     //  Java8 support for Lifecycles - use this instead of compiler above when working with Java8
-    // implementation "android.arch.lifecycle:common-java8:$architectureComponentsVersion"
+    implementation "android.arch.lifecycle:common-java8:$architectureComponentsVersion"
 
     //  Room
     //  implementation "android.arch.persistence.room:runtime:$roomVersion"
