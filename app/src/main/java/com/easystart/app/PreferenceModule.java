@@ -6,6 +6,9 @@ import android.preference.PreferenceManager;
 import dagger.Module;
 import dagger.Provides;
 
+/**
+ * Module that provides SharedPreferences.
+ */
 @Module
 public class PreferenceModule {
     @Provides
