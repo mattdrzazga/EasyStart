@@ -1,6 +1,6 @@
 package com.easystart.app;
 
-import com.easystart.MainActivity;
+import com.easystart.ui.main.MainActivity;
 
 import dagger.Module;
 import dagger.android.ContributesAndroidInjector;

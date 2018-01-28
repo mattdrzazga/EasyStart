@@ -9,7 +9,6 @@ import dagger.Module;
  * Module that provides application Context.
  */
 @Module
-abstract class AppModule {
-    @Binds
-    abstract Context bindContext(EasyStart easyStart);
+interface AppModule {
+    @Binds Context bindContext(EasyStart application);
 }
