@@ -16,7 +16,8 @@ import dagger.android.support.AndroidSupportInjectionModule;
         AndroidSupportInjectionModule.class,
         AndroidBindingModule.class,
         AppModule.class,
-        ViewModelModule.class
+        ViewModelModule.class,
+        PreferenceModule.class
 })
 interface AppComponent extends AndroidInjector<EasyStart> {
     @Component.Builder
