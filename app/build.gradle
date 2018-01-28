@@ -55,7 +55,7 @@ dependencies {
     testImplementation "junit:junit:$junitVersion"
     androidTestImplementation 'com.android.support.test:runner:1.0.1'
     androidTestImplementation "com.android.support.test.espresso:espresso-core:$espressoVersion"
-    
+
     //  Dagger2
     implementation "com.google.dagger:dagger:$daggerVersion"
     implementation "com.google.dagger:dagger-android:$daggerVersion"
@@ -68,20 +68,19 @@ dependencies {
     //  ViewModel
     implementation "android.arch.lifecycle:extensions:$architectureComponentsVersion"
     annotationProcessor "android.arch.lifecycle:compiler:$architectureComponentsVersion"
-    // Java8 support for Lifecycles - use this instead of compiler above when working with Java8
-//    implementation "android.arch.lifecycle:common-java8:$architectureComponentsVersion"
+    //  Java8 support for Lifecycles - use this instead of compiler above when working with Java8
+    // implementation "android.arch.lifecycle:common-java8:$architectureComponentsVersion"
 
-
-//  Room
-//    implementation "android.arch.persistence.room:runtime:$roomVersion"
-//    annotationProcessor "android.arch.persistence.room:compiler:$roomVersion"
+    //  Room
+    //  implementation "android.arch.persistence.room:runtime:$roomVersion"
+    //  annotationProcessor "android.arch.persistence.room:compiler:$roomVersion"
 
     //  ButterKnife
-//    implementation "com.jakewharton:butterknife:$butterknifeVersion"
-//    annotationProcessor "com.jakewharton:butterknife-compiler:$butterknifeVersion"
+    //  implementation "com.jakewharton:butterknife:$butterknifeVersion"
+    //  annotationProcessor "com.jakewharton:butterknife-compiler:$butterknifeVersion"
 
-//    debugImplementation "com.squareup.leakcanary:leakcanary-android:$leakCanaryVersion"
-//    releaseImplementation "com.squareup.leakcanary:leakcanary-android-no-op:$leakCanaryVersion"
-//    testImplementation "com.squareup.leakcanary:leakcanary-android-no-op:$leakCanaryVersion"
+    //  debugImplementation "com.squareup.leakcanary:leakcanary-android:$leakCanaryVersion"
+    //  releaseImplementation "com.squareup.leakcanary:leakcanary-android-no-op:$leakCanaryVersion"
+    //  testImplementation "com.squareup.leakcanary:leakcanary-android-no-op:$leakCanaryVersion"
 
 }
