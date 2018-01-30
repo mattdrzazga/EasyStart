@@ -87,7 +87,7 @@ dependencies {
 
     //  ViewModel
     implementation "android.arch.lifecycle:extensions:$architectureComponentsVersion"
-    //  Java8 support for Lifecycles - use this instead of compiler above when working with Java8
+    //  Java8 support for Lifecycles
     implementation "android.arch.lifecycle:common-java8:$architectureComponentsVersion"
 
     //  Room
