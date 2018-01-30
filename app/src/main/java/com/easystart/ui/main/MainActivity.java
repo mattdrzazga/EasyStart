@@ -14,7 +14,7 @@ import com.easystart.utils.Preferences;
 import javax.inject.Inject;
 
 import dagger.android.support.DaggerAppCompatActivity;
-
+import retrofit2.Retrofit;
 
 public class MainActivity extends DaggerAppCompatActivity {
 
@@ -42,6 +42,12 @@ public class MainActivity extends DaggerAppCompatActivity {
     @Inject
     Preferences preferences2;
 
+    @Inject
+    Retrofit retrofit;
+
+    @Inject
+    Retrofit retrofit2;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -57,7 +63,9 @@ public class MainActivity extends DaggerAppCompatActivity {
         Log.d(TAG, "onCreate: " + sp2);
         Log.d(TAG, "onCreate: " + preferences);
         Log.d(TAG, "onCreate: " + preferences2);
-        
+        Log.d(TAG, "onCreate: " + retrofit);
+        Log.d(TAG, "onCreate: " + retrofit2);
+
         ViewModelProviders.of(this, factory).get(MainViewModel.class);
     }
 }
