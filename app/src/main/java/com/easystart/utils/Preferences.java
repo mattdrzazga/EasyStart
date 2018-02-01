@@ -27,6 +27,6 @@ public class Preferences {
 
     @SuppressWarnings("unused")
     public boolean getFirstRun() {
-        return preferences.getBoolean(KEY_FIRST_RUN, false);
+        return preferences.getBoolean(KEY_FIRST_RUN, true);
     }
 }
