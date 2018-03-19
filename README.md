@@ -7,6 +7,8 @@ Project uses ViewModelFactory to inject dependencies into ViewModel classes.
 
 Gradle module file contains various libraries implementations and has Java8 support enabled.
 
+![Screenshot](images/Screenshot_20180319_220851.png)
+
 Features:
 - Most popular libraries are already added to the gradle dependencies. Uncomment what you need and get started.
 - Want to use the Architecture Components' ViewModel? It's ready to use with dependencies waiting to be injected into the constructor.
